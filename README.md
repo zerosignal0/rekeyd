@@ -1,2 +1,2 @@
 # rekeyd
-Client Daemon for Vault
+Client Daemon for Hashicorp Vault
