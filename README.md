@@ -1,2 +1,2 @@
 # rekeyd
-Client Daemon for Hashicorp Vault
+Golang Client Daemon for Hashicorp Vault
