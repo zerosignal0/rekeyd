@@ -1,0 +1,23 @@
+language: go
+
+sudo: true
+
+go:
+  - 1.4
+  - tip
+
+matrix:
+  allow_failures:
+    - go: tip
+
+install:
+  - git clone https://github.com/hashicorp/vault $GOPATH/src/github.com/hashicorp/vault
+
+script:
+  - cd $GOPATH/src/github.com/hashicorp/vault
+  - go get github.com/tools/godep
+  - go get github.com/mitchellh/gox
+  - make
+  - make dev
+  - chmod +x $TRAVIS_BUILD_DIR/ci/bin/start-vault-server.sh
+  - $TRAVIS_BUILD_DIR/ci/bin/start-vault-server.sh

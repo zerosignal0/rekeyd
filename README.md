@@ -1,6 +1,8 @@
 # rekeyd
 Golang client daemon for Hashicorp Vault https://www.vaultproject.io/
 
+[![Build Status](https://travis-ci.org/bitvector2/rekeyd.svg?branch=master)](https://travis-ci.org/bitvector2/rekeyd)
+
 The daemon's purpose is to apply credential changes that occur inside Vault in pseudo-realtime to applications that are not directly integrated.
 
 Initial Features:
